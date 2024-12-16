@@ -30,7 +30,7 @@ const Conversation = () => {
           "Content-Type": "application/json",
       }
     })
-    setHeaderName(res.data?.name || 'loading...')
+    setHeaderName(res.data?.name)
 setHeaderIcon(res.data?.icon || 'https://i.ibb.co/zPRHxcV/profile.jpg')
   }
     const authorize = async () => {
