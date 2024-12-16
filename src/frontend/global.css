@@ -170,7 +170,7 @@ body {
   color: white;
   margin: 5px 0;
   padding: 10px 15px;
-  max-width: 70%;
+  max-width: 40%;
   min-width: max-content;
   border-radius: 10px;
   line-height: 1.5;
@@ -355,4 +355,17 @@ form p{
     outline: 10px solid rbga(255, 0, 0, 0.2);
     border: 2px solid #ff0000;
   }
+}
+.logout-btn{
+  background: none;
+  border: none;
+  outline: none;
+  color: red;
+}
+.logout{
+  color: #ff0000;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
 }

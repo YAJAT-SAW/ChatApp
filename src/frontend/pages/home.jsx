@@ -37,8 +37,8 @@ setQueryResult(filteredUsers);
         },
       },
     );
-    setUsers(res.data?.users);
-    setQueryResult(res.data?.users);
+    setUsers(res.data?.users || []);
+    setQueryResult(res.data?.users || []);
     }catch{
       setUsers([])
     }
@@ -97,6 +97,10 @@ localStorage.removeItem("token");
     <div>
       <div>
         <h2>WhatsApp</h2>
+        <span className="logout">
+          <p>logout</p><button className="logout-btn" onClick={logout}><i className="bi bi-door-open-fill"/>
+          </button>
+        </span>
         email: {email}
       </div>
       <div>

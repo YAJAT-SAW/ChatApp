@@ -4,6 +4,10 @@ import axios from 'axios';
 import { io } from 'socket.io-client';
 
 
+const socket = io('https://chat-r311.onrender.com/', {
+  transports: ["websocket"],
+});
+
 export const DisplayUsers = (prop) =>{
 const navigate = useNavigate();
 
