@@ -93,7 +93,7 @@ exports.getConversations = async (req, res) =>{
 
 exports.getHeaderData = async (req, res) => {
   const { id } = req.params;
-  const user = User.findOne({id})
+  const user = User.findById(id)
   res.status(200).json({
     name: user.name,
     icon: user.icon || null
