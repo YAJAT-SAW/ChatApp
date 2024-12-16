@@ -5,7 +5,7 @@
 //});
 
 const express = require('express');
-const { sendMessage, getMessages, getConversations } = require('../controllers/messageController');
+const { sendMessage, getMessages, getConversations, getHeaderData } = require('../controllers/messageController');
 const { LogInAuthorization } = require('../middlewares/protectedMiddlewares');
 
 
@@ -15,6 +15,7 @@ const router = express.Router();
 router.post('/send/:id', LogInAuthorization, sendMessage);
 router.get('/conversation/:id',LogInAuthorization, getMessages);
 router.get('/conversations', LogInAuthorization, getConversations);
+router.get('/getHeaderData/:id', getHeaderData)
 
 
 module.exports = router;

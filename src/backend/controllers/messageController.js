@@ -90,3 +90,12 @@ exports.getConversations = async (req, res) =>{
     res.status(500).json({message: "Error fetching users", error: error.message})
   }
 }
+
+exports.getHeaderData = async () => {
+  const { id } = req.params;
+  const user = User.findOne({id})
+  res.status(200).json({
+    name: user.name,
+    icon: user.icon || null
+  })
+}
